@@ -18,13 +18,13 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader",
-        options: {
-          name: "name=/[hash].[ext]",
-        },
-      },
+      // {
+      //   test: /\.((png)|(eot)|(woff)|(woff2)|(ttf)|(svg)|(gif))(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "file-loader",
+      //   // options: {
+      //   //   name: "[hash].[ext]",
+      //   // },
+      // },
       {
         loader: "babel-loader",
         test: /\.js?$/,
