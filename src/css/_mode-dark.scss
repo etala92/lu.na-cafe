@@ -16,7 +16,7 @@
   --accent-color: hsl(53, 80%, 63%);
 
   img,
-  .subheader {
+  .subheader > .bg-zoom {
     filter: brightness(0.8) contrast(1.2);
   }
 

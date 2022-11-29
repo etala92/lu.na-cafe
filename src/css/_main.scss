@@ -75,19 +75,29 @@
   align-items: center;
   color: var(--color-subheader);
   background-color: var(--bg-color-subheader);
-  mix-blend-mode: luminosity;
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // mix-blend-mode: soft-light;
   resize: both;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  &:hover {
-    mix-blend-mode: normal;
+  // position: relative;
+  > .bg-zoom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform ease 0.5s;
+    &:hover {
+      // mix-blend-mode: normal;
+      transform: scale(1.2);
+    }
   }
   .title-container {
-    margin: 0 auto;
+    // position: absolute;
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.85);
     border-radius: 0.5rem;

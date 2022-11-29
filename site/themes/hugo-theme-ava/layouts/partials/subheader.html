@@ -1,10 +1,12 @@
-<header class="subheader" style="background-image: url({{ .context.Params.image | default .site.Params.meta_tags.meta_og_image | absURL }});">
-    <div class="title-container slide-invert"> 
-        {{- if .isHome }}
-            <h2 class="h1 post-title">{{ .context.Title | default .site.Title }}</h2>
-        {{- else }}
-            <h1 class="post-title">{{ .context.Title | default .site.Title }}</h1>
-        {{- end }}
-        {{ .date }}
-    </div>
+<header class="subheader">
+  {{ $bg-url := .context.Params.image | default
+  .site.Params.meta_tags.meta_og_image | absURL}}
+  <div class="bg-zoom" style="background-image: url( {{ $bg-url }} );"></div>
+  <div class="title-container slide-invert">
+    {{- if .isHome }}
+    <h2 class="h1 post-title">{{ .context.Title | default .site.Title }}</h2>
+    {{- else }}
+    <h1 class="post-title">{{ .context.Title | default .site.Title }}</h1>
+    {{- end }} {{ .date }}
+  </div>
 </header>
