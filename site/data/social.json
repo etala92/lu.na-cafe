@@ -1,27 +1,27 @@
 [
-    {
-        "name": "GitHub",
-        "link": "https://github.com/jmau111/hugo-theme-ava",
-        "html_class": "github"
-    },
-    {
-        "name": "Twitter",
-        "link": "https://twitter.com/gohugoio",
-        "html_class": "twitter"
-    },
-    {
-        "name": "Dribbble",
-        "link": "https://dribbble.com",
-        "html_class": "dribbble"
-    },
-    {
-        "name": "LinkedIn",
-        "link": "https://linkedin.com",
-        "html_class": "linkedin"
-    },
-    {
-        "name": "Instagram",
-        "link": "https://instagram.com",
-        "html_class": "instagram"
-    }
+  {
+    "name": "GitHub",
+    "link": "https://github.com/etala92/lu.na-cafe",
+    "html_class": "github"
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/",
+    "html_class": "twitter"
+  },
+  {
+    "name": "Facebook",
+    "link": "https://facebook.com/",
+    "html_class": "facebook"
+  },
+  {
+    "name": "Instagram",
+    "link": "https://instagram.com",
+    "html_class": "instagram"
+  },
+  {
+    "name": "Google Maps",
+    "link": "https://goo.gl/maps/h2wmxXtsmkrfjiLeA",
+    "html_class": "map-pin"
+  }
 ]
