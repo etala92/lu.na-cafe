@@ -22,7 +22,9 @@ canonifyURLs = true
   ga_id=""
   mainSections = ["post"]
   disqus = "xxxxxxx"
-  
+  google_fonts = [
+    ["Arizonia", "400"]
+  ]
 
   [params.meta_tags]
     meta_description = "Ava is a light theme for your blog with essential features you might dig in."

@@ -14,8 +14,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    {{ partial "og.html" . }} {{ partial "icons.html" . }} {{ partial
-    "other-metas.html" . }}
+    {{ partial "og.html" . }}
+    {{ partial "icons.html" . }}
+    {{ partial
+      "other-metas.html" .
+    }}
+
 
     <script>
       const storage = localStorage.getItem("dark-mode");
@@ -31,31 +35,39 @@
 
     {{ $webkitAssets := .Site.Data.webpack.main }}
     <script src="{{ relURL $webkitAssets.js }}"></script>
-    <link rel="stylesheet" href="{{relURL $webkitAssets.css }}" />
+    <link rel="stylesheet" href="{{ relURL $webkitAssets.css }}" />
+    {{ partial "google-fonts" . }}
+
 
     <!-- block additional styles in templates -->
     {{ block "stylesheets" . }}{{ end }}
     <!-- /block additional styles in templates  -->
   </head>
 
-  <body class='{{ block "body_classes" . }}{{ end }}'>
+  <body class="{{ block "body_classes" . }}{{ end }}">
     {{ partial "header.html" . }}
+
 
     <main class="site-main">
       <!-- let's keep a way to override the whole structure by 
       redefining the whole block main -->
       {{ block "main" . }}
-      <article>
-        {{- block "subheader" . }} {{ partial "subheader.html" (dict "context" .
-        "site" $.Site) }} {{ end }}
-        <div class="content slide-invert">
-          {{- block "content" . }}{{ end }} {{- block "comments" . }}{{ end }}
-        </div>
-      </article>
+        <article>
+          {{- block "subheader" . }}
+            {{ partial "subheader.html" (dict "context" .
+              "site" $.Site)
+            }}
+          {{ end }}
+          <div class="content slide-invert">
+            {{- block "content" . }}{{ end }}
+            {{- block "comments" . }}{{ end }}
+          </div>
+        </article>
       {{ end }}
     </main>
 
     {{ partialCached "footer.html" . }}
+
 
     <!-- block additional scripts in templates -->
     {{ block "scripts" . }}{{ end }}

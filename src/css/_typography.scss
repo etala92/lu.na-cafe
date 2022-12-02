@@ -10,9 +10,15 @@ body {
 }
 
 // @see https://codepen.io/laurilllll/pen/ExgJYRm
+.site-title {
+  font-family: "Arizonia";
+  --min: 2.5em; // minimum value
+  --val: 5vw; // preferred value = 5% viewport width
+  --max: 3em; // maximum value
+}
+
 h1,
 .h1,
-.site-title,
 h2,
 .h2,
 h3,
@@ -50,7 +56,6 @@ h2,
   --val: 4vw; /* preferred value = 4% viewport width */
   --max: 2.25em; /* maximum value */
 }
-.site-title,
 h3,
 .h3 {
   --min: 1.35em; /* minimum value */
@@ -105,7 +110,7 @@ li {
   margin: var(--gap) 0;
 }
 li {
-  margin: calc(var(--gap)/3) 0;
+  margin: calc(var(--gap) / 3) 0;
 }
 p + p,
 p + ol,

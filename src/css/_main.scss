@@ -39,20 +39,21 @@
 .site-header {
   background-color: var(--bg-color-header);
   color: var(--color-header);
-  padding: calc(var(--gap) / 2) var(--gap);
-
+  padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
   .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    gap: var(--gap);
+    gap: 5vw;
     max-width: var(--header-width);
   }
 
   .site-title {
     margin: 0;
     padding: 0;
+    flex-grow: 1;
+    text-align: center;
 
     a {
       color: var(--color-header);
@@ -117,6 +118,7 @@
   width: 36px;
   border: 0;
   cursor: pointer;
+  display: block;
 }
 .site-nav {
   padding: 0 1rem;
@@ -360,16 +362,6 @@
   .hide-mobile {
     display: none;
   }
-  .site-header {
-    .inner {
-      display: block;
-    }
-    .site-title {
-      a {
-        display: inline-block;
-      }
-    }
-  }
   .site-nav {
     margin: 0;
     margin-top: var(--gap);
@@ -378,7 +370,7 @@
     transform: none;
     position: fixed;
     right: 0;
-    top: calc(1px + 2rem);
+    top: calc(var(--gap) / 2 - 4px);
     padding: calc(var(--gap) / 2);
     width: 70vw;
     z-index: 101;
@@ -395,11 +387,6 @@
     li {
       margin: 0;
     }
-  }
-  .nav-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
   }
   #check-menu:checked ~ .site-nav {
     opacity: 1;
