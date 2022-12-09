@@ -1,5 +1,9 @@
+@use "sass:color";
+$bg-color: hsl(216, 10%, 10%);
+
 :root[data-theme="dark"] {
-  --bg-color: hsl(216, 10%, 10%);
+  --bg-color: #{$bg-color};
+  --bg-color-alpha: #{color.change($bg-color, $alpha: 0.8)};
   --bg-color-header: hsl(216, 10%, 10%);
   --bg-color-subheader: hsl(220, 7%, 17%);
   --bg-color-footer: hsl(220, 7%, 8%);

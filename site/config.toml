@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "it"
 title = "Lu.Na Cafè"
 theme = "hugo-theme-ava"
-paginate = 7
+paginate = 8
 mainSections = "post"
 
 [languages]
@@ -15,7 +15,6 @@ canonifyURLs = true
 
 [module]
   [module.hugoVersion]
-    extended = true
     min = "0.87.0"
     
 [params]
@@ -33,7 +32,7 @@ canonifyURLs = true
     meta_og_type = "website"
     meta_og_url = "https://demos.julien-maury.dev/hugo-theme-ava"
     meta_og_image_ = "https://raw.githubusercontent.com/jmau111/hugo-theme-ava/main/images/default.jpeg"
-    meta_og_image = "subheader.png"
+    meta_og_image = "subheader.jpg"
     meta_og_description = "Ava is a light theme for your blog with essential features you might dig in."
     meta_twitter_card = "summary"
     meta_twitter_site = "@gohugoio"
@@ -62,14 +61,9 @@ canonifyURLs = true
     weight = 2
 
 [[menu.main]]
-    name = "Archivio"
-    url = "/posts/"
-    weight = 3
-
-[[menu.main]]
     name = "Contattaci"
     url = "/contact/"
-    weight = 4
+    weight = 3
 
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
