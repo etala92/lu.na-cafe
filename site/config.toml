@@ -56,6 +56,11 @@ canonifyURLs = true
         angledQuotes = true
 
 [[menu.main]]
+    name = "Menu"
+    url = "/menu/"
+    weight = 2
+
+[[menu.main]]
     name = "Chi siamo"
     url = "/about/"
     weight = 2

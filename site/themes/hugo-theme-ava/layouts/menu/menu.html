@@ -1,0 +1,9 @@
+{{ define "body_classes" }}page{{ end }}
+
+{{ define "content" }}
+  <ul class="listing-menu">
+    {{ range .Site.Data.menu.collection }}
+      {{ partial "menu-section" . }}
+    {{ end }}
+  </ul>
+{{- end }}

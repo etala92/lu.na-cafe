@@ -1,0 +1,27 @@
+<li class="menu-section">
+  {{- if .image }}
+    <img class="menu-section__image" src="{{ .image }}" />
+  {{- end }}
+  <div class="menu-section__body">
+    <h3 class="menu-section__title">{{ .name }}</h3>
+    {{- if .description }}
+      <p>{{ .description }}</p>
+    {{- end }}
+    <ul class="menu-section__list">
+      {{ range .items }}
+        <li class="menu-item">
+          <span class="menu-item__name"
+            >{{ .name }}<span class="leaders" aria-hidden="true"></span
+          ></span>
+          <span class="menu-item__price">
+            {{ printf "%v%v" (lang.FormatNumberCustom 2 .price "- , .") $.currency }}
+            {{- if .unit }}
+              /
+              {{ .unit }}
+            {{- end }}
+          </span>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</li>
