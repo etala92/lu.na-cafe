@@ -2,7 +2,7 @@
 title: "Snack"
 description: "This is desc 6"
 date: 2021-08-06T11:11:11+01:00
-type: "post"
+type: event
 draft: false
 image: "/images/sandwich.jpg"
 ---

@@ -2,6 +2,7 @@ const { merge } = require("webpack-merge");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { EnvironmentPlugin } = require("webpack");
 
 const common = require("./webpack.common");
 
@@ -11,6 +12,7 @@ module.exports = merge(common, {
   output: {
     filename: "[name].js",
     chunkFilename: "[id].css",
+    clean: true,
   },
 
   devServer: {
@@ -41,6 +43,14 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
+    }),
+
+    new EnvironmentPlugin({
+      CMS_CONF: {
+        config: {
+          local_backend: true,
+        },
+      },
     }),
   ],
 });

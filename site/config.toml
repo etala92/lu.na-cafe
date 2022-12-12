@@ -19,7 +19,7 @@ canonifyURLs = true
     
 [params]
   ga_id=""
-  mainSections = ["post"]
+  mainSections = ["events"]
   disqus = "xxxxxxx"
   google_fonts = [
     ["Arizonia", "400"]

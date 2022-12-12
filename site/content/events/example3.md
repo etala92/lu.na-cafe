@@ -2,7 +2,7 @@
 title: "Example 3"
 description: "This is desc 3"
 date: 2021-08-03T11:11:11+01:00
-type: "post"
+type: event
 draft: false
 image: "/images/breakfast.jpg"
 ---

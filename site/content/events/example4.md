@@ -1,20 +1,16 @@
 ---
-title: "Example 5"
-description: "This is desc 5"
-date: 2021-08-05T11:11:11+01:00
-type: "post"
+title: "Example 4"
+description: "This is desc 4"
+date: 2021-08-04T11:11:11+01:00
+type: event
 draft: false
-image: "/images/aperitif.jpg"
+image: "/images/bday-party.jpg"
 ---
-
-## First
 
 > Non, rien de rien  
 > Non, je ne regrette rien  
 > Ni le bien, qu'on m'a fait  
 > Ni le mal, tout ça m'est bien égal !
-
-## 2nd
 
 > Non, rien de rien  
 > Non, je ne regrette rien  

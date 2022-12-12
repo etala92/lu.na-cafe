@@ -1,7 +1,7 @@
 @use "sass:color";
 $bg-color: hsl(30, 37%, 89%);
 
-:root[data-theme="light"] {
+:root:not([data-theme="dark"]) {
   --bg-color: #{$bg-color};
   --bg-color-alpha: #{color.change($bg-color, $alpha: 0.8)};
   --bg-color-header: hsl(30, 37%, 89%);

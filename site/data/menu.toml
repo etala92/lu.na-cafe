@@ -3,51 +3,55 @@ name = "Caffetteria"
 image = "/images/cappuccino.jpg"
 currency = "€"
 
-  [[collection.items]]
-  name = "Cappuccino"
-  price = 1.2
+[[collection.items]]
+name = "Cappuccino"
+price = 1.2
 
-  [[collection.items]]
-  name = "Caffè"
-  price = 1
+[[collection.items]]
+name = "Caffè"
+price = "1.5"
 
-  [[collection.items]]
-  name = "Spremuta"
-  price = 2.5
+[[collection.items]]
+name = "Spremuta"
+price = 2.5
 
 [[collection]]
 name = "Drink"
 image = "/images/drink.jpg"
 currency = "€"
 
-  [[collection.items]]
-  name = "Vino"
-  price = 1.7
-  unit = "25cl"
+[[collection.items]]
+name = "Vino"
+price = 1.7
+unit = "25cl"
 
-  [[collection.items]]
-  name = "Birra"
-  price = 1
-  unit = "33cl"
+[[collection.items]]
+name = "Birra"
+price = 1
+unit = "33cl"
 
-  [[collection.items]]
-  name = "Coca Cola"
-  price = 2.5
-  unit = "33cl"
+[[collection.items]]
+name = "Coca Cola"
+price = 2.5
+unit = "33cl"
 
 [[collection]]
 name = "Snack"
 image = "/images/sandwich.jpg"
 currency = "€"
 
-  [[collection.items]]
-  name = "Tramezzino"
-  price = 2
+[[collection.items]]
+name = "Tramezzino"
+price = 2
 
-  [[collection.items]]
-  name = "Trancio di pizza"
-  price = 2.5
+[[collection.items]]
+name = "Trancio di pizza"
+price = 2.5
 
-  [[collection.items]]
-  name = "Patatine"
-  price = 1.5
+[[collection.items]]
+name = "Patatine"
+price = 1.5
+
+[[collection.items]]
+name = "Fetta di torta"
+price = "3.5"
