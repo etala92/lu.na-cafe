@@ -6,8 +6,18 @@
   command = "yarn build"
   publish = "dist"
 
+[context.production.environment]
+  CMS_BRANCH = "main"
+
 [context.deploy-preview]
   command = "yarn build:preview"
+  environment = { CMS_BRANCH = "main" }
+
+[context.branch-deploy.environment]
+  CMS_BRANCH = "dev"
+
+[context.dev.environment]
+  CMS_BRANCH = "dev"
 
 [dev]
   framework = "hugo"

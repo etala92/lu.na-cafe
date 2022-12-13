@@ -6,55 +6,57 @@ const { EnvironmentPlugin } = require("webpack");
 
 const common = require("./webpack.common");
 
-module.exports = merge(common, {
-  mode: "development",
+module.exports = (env) =>
+  merge(common, {
+    mode: "development",
 
-  output: {
-    filename: "[name].js",
-    chunkFilename: "[id].css",
-    clean: true,
-  },
-
-  devServer: {
-    port: process.env.PORT || 3000,
-    static: {
-      directory: path.join(process.cwd(), "./dist"),
-      watch: true,
-    },
-    open: {
-      app: {
-        name: "chromium",
-      },
-    },
-    historyApiFallback: {
-      rewrites: [{ from: /./, to: "404.html" }],
-    },
-  },
-
-  plugins: [
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: [
-        "dist/**/*.js",
-        "dist/**/*.css",
-        "site/data/webpack.json",
-      ],
-    }),
-
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
+    output: {
+      filename: "[name].js",
       chunkFilename: "[id].css",
-    }),
+      clean: true,
+    },
 
-    new EnvironmentPlugin({
-      CMS_CONF: {
-        config: {
-          backend: {
-            name: "git-gateway",
-            branch: "dev",
-          },
-          local_backend: true,
+    devServer: {
+      port: process.env.PORT || 3000,
+      static: {
+        directory: path.join(process.cwd(), "./dist"),
+        watch: true,
+      },
+      open: {
+        app: {
+          name: "chromium",
         },
       },
-    }),
-  ],
-});
+      historyApiFallback: {
+        rewrites: [{ from: /./, to: "404.html" }],
+      },
+    },
+
+    plugins: [
+      new CleanWebpackPlugin({
+        cleanOnceBeforeBuildPatterns: [
+          "dist/**/*.js",
+          "dist/**/*.css",
+          "site/data/webpack.json",
+        ],
+      }),
+
+      new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css",
+      }),
+
+      new EnvironmentPlugin({
+        CMS_BRANCH: env.BRANCH || null,
+        CMS_CONF: {
+          config: {
+            backend: {
+              name: "git-gateway",
+              branch: "dev",
+            },
+            local_backend: true,
+          },
+        },
+      }),
+    ],
+  });

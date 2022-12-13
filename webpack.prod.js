@@ -37,6 +37,7 @@ module.exports = (env) =>
 
     plugins: [
       new EnvironmentPlugin({
+        CMS_BRANCH: env.BRANCH || null,
         CMS_CONF: {
           config: {
             backend: {

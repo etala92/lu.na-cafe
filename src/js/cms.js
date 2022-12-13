@@ -10,6 +10,6 @@ CMS.registerLocale("de", de);
 CMS.init(process.env.CMS_CONF);
 
 console.log(process.env.CMS_CONF);
-console.log("BRANCH:", process.env.BRANCH);
+console.log("BRANCH:", process.env.CMS_BRANCH);
 
 CMS.registerPreviewStyle("/main.css");
