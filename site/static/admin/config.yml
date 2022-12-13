@@ -1,7 +1,3 @@
-backend:
-  name: git-gateway
-  branch: main
-
 # locale: "it"
 
 media_folder: "site/static/images" # Folder where user uploaded files should go

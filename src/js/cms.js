@@ -9,4 +9,6 @@ CMS.registerLocale("de", de);
 
 CMS.init(process.env.CMS_CONF);
 
+console.log(process.env.CMS_CONF);
+
 CMS.registerPreviewStyle("/main.css");

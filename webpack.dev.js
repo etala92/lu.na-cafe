@@ -48,6 +48,10 @@ module.exports = merge(common, {
     new EnvironmentPlugin({
       CMS_CONF: {
         config: {
+          backend: {
+            name: "git-gateway",
+            branch: "dev",
+          },
           local_backend: true,
         },
       },
