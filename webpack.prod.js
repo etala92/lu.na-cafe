@@ -42,7 +42,7 @@ module.exports = (env) =>
           config: {
             backend: {
               name: "git-gateway",
-              branch: env.BRANCH || "main",
+              branch: env.BRANCH || env.CMS_BRANCH || "main",
             },
           },
         },
